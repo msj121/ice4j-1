@@ -26,6 +26,7 @@ import org.ice4j.*;
 import org.ice4j.ice.*;
 import org.ice4j.ice.Agent;
 import org.ice4j.ice.sdp.*;
+import org.jitsi.javax.sdp.NistSdpFactory;
 
 /**
  * Utilities for manipulating SDP. Some of the utilities in this method <b>do
@@ -55,7 +56,7 @@ public class SdpUtils
      */
     public static String createSDPDescription(Agent agent) throws Throwable
     {
-        SdpFactory factory = SdpFactory.getInstance();
+        SdpFactory factory = new NistSdpFactory();
         SessionDescription sdess = factory.createSessionDescription();
 
         IceSdpUtils.initSessionDescription(sdess, agent);
@@ -77,7 +78,7 @@ public class SdpUtils
     public static void parseSDP(Agent localAgent, String sdp)
         throws Exception
     {
-        SdpFactory factory = SdpFactory.getInstance();
+        SdpFactory factory = new NistSdpFactory();
         SessionDescription sdess = factory.createSessionDescription(sdp);
 
         for(IceMediaStream stream : localAgent.getStreams())

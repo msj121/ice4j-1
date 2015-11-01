@@ -20,8 +20,19 @@
 
   <dependencies>
     <dependency>
-      <groupId>javax.sdp</groupId>
-      <artifactId>jain-sdp</artifactId>
+      <groupId>org.opentelecoms.sdp</groupId>
+      <artifactId>sdp-api</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jitsi</groupId>
+        <artifactId>jain-sip-ri</artifactId>
+        <version>1.2.162-jitsi+dfsg1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jitsi</groupId>
+        <artifactId>java-sdp-nist-bridge</artifactId>
+        <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.bitlet</groupId>
