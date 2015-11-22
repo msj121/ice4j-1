@@ -3,7 +3,7 @@
 /junit-reports/
 /target/
 /ice4j.jar
-.classpath
-.project
+#.classpath
+#.project
 .settings/
 bin/
