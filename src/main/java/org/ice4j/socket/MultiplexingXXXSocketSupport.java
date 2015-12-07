@@ -307,6 +307,7 @@ abstract class MultiplexingXXXSocketSupport
 
                     synchronized (socketReceived)
                     {
+                    	//TODO: does this arraycopy need to be true? Causes android memory GC
                         socketReceived.add(
                                 accepted ? clone(p, /* arraycopy */ true) : p);
                         socketReceived.notifyAll();
