@@ -182,12 +182,12 @@ public class MultiplexedSocket
         /**
          * A buffer to receive data into.
          */
-        private final byte[] buf = new byte[1500];
+        private final byte[] buf = new byte[35000];
 
         /**
          * A <tt>DatagramPacket</tt> instance to receive data into.
          */
-        private final DatagramPacket packet = new DatagramPacket(buf, 1500);
+        private final DatagramPacket packet = new DatagramPacket(buf, 35000);
 
         /**
          * Initializes a new <tt>TCPInputStream</tt>.

@@ -204,7 +204,8 @@ abstract class MultiplexingXXXSocketSupport
                     {
                         logger.log(
                                 Level.WARNING,
-                                "Truncating received DatagramPacket data!");
+                                "Truncating received DatagramPacket data! was "+srcLength+" is now "+destLength);
+                        
                     }
                     System.arraycopy(
                             srcData, src.getOffset(),

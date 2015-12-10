@@ -759,7 +759,7 @@ public class RelayedCandidateDatagramSocket
         while (!closed)
         {
             // read one datagram a time
-            int receiveBufferSize = 1500;
+            int receiveBufferSize = 35000;
 
             if (p == null)
             {
